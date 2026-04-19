@@ -1,0 +1,352 @@
+{
+  "meta": {
+    "total_candidates": 127,
+    "returned_last_12_months": 43,
+    "at_sub_50_startups": 28,
+    "founders_or_cofounders": 19,
+    "last_updated": "2026-04-19T13:00:00Z",
+    "cities": [
+      {"name": "Bangalore", "lat": 12.9716, "lng": 77.5946, "count": 67},
+      {"name": "Delhi NCR", "lat": 28.6139, "lng": 77.2090, "count": 24},
+      {"name": "Mumbai", "lat": 19.0760, "lng": 72.8777, "count": 16},
+      {"name": "Hyderabad", "lat": 17.3850, "lng": 78.4867, "count": 12},
+      {"name": "Chennai", "lat": 13.0827, "lng": 80.2707, "count": 8}
+    ]
+  },
+  "candidates": [
+    {
+      "id": "1",
+      "name": "Priya Sharma",
+      "headline": "Building AI agents @ stealth",
+      "score": 9.2,
+      "score_tier": "HIGH",
+      "former_lab": "Anthropic",
+      "former_title": "Senior Research Engineer",
+      "former_tenure_years": 3.2,
+      "former_end_date": "2024-11-01",
+      "current_role": "Founder & CEO",
+      "current_company": "Stealth Startup",
+      "current_company_headcount": 4,
+      "current_city": "Bangalore",
+      "days_since_return": 126,
+      "signals": [
+        {"type": "founder", "label": "Founder/CEO"},
+        {"type": "recent_return", "label": "Returned 4mo ago"},
+        {"type": "tiny_company", "label": "Sub-10 team"},
+        {"type": "senior", "label": "Senior+ at lab"}
+      ],
+      "synthesis": "Priya spent 3+ years at Anthropic on agent research before relocating to Bangalore in late 2024 to start a stealth AI company. Her current LinkedIn shows a 4-person team and a recently-registered domain.",
+      "linkedin_url": "https://linkedin.com/in/priya-sharma"
+    },
+    {
+      "id": "2",
+      "name": "Arjun Patel",
+      "headline": "Ex-OpenAI, building next-gen foundation models",
+      "score": 8.8,
+      "score_tier": "HIGH",
+      "former_lab": "OpenAI",
+      "former_title": "Research Scientist",
+      "former_tenure_years": 2.5,
+      "former_end_date": "2025-01-15",
+      "current_role": "Co-founder & CTO",
+      "current_company": "NeuralForge AI",
+      "current_company_headcount": 12,
+      "current_city": "Bangalore",
+      "days_since_return": 94,
+      "signals": [
+        {"type": "founder", "label": "Co-founder"},
+        {"type": "recent_return", "label": "Returned 3mo ago"},
+        {"type": "senior", "label": "Research Scientist"}
+      ],
+      "synthesis": "Arjun was part of the GPT-4 post-training team at OpenAI. Returned to India in early 2025 to co-found NeuralForge AI, focused on efficient inference for edge devices.",
+      "linkedin_url": "https://linkedin.com/in/arjun-patel-ai"
+    },
+    {
+      "id": "3",
+      "name": "Kavitha Raghavan",
+      "headline": "Head of ML @ Razorpay",
+      "score": 7.4,
+      "score_tier": "MED",
+      "former_lab": "DeepMind",
+      "former_title": "Senior Research Engineer",
+      "former_tenure_years": 4.1,
+      "former_end_date": "2024-06-30",
+      "current_role": "Head of ML",
+      "current_company": "Razorpay",
+      "current_company_headcount": 3200,
+      "current_city": "Bangalore",
+      "days_since_return": 293,
+      "signals": [
+        {"type": "senior", "label": "Senior+ at lab"},
+        {"type": "large_company", "label": "At scale-up"}
+      ],
+      "synthesis": "Kavitha spent 4 years at DeepMind London working on reinforcement learning. Joined Razorpay as Head of ML to build fraud detection systems.",
+      "linkedin_url": "https://linkedin.com/in/kavitha-raghavan"
+    },
+    {
+      "id": "4",
+      "name": "Rohan Mehta",
+      "headline": "Founding engineer @ Sarvam AI",
+      "score": 8.1,
+      "score_tier": "HIGH",
+      "former_lab": "Meta",
+      "former_title": "ML Engineer",
+      "former_tenure_years": 2.8,
+      "former_end_date": "2024-09-01",
+      "current_role": "Founding Engineer",
+      "current_company": "Sarvam AI",
+      "current_company_headcount": 45,
+      "current_city": "Bangalore",
+      "days_since_return": 231,
+      "signals": [
+        {"type": "founding_team", "label": "Founding team"},
+        {"type": "recent_return", "label": "Returned 8mo ago"}
+      ],
+      "synthesis": "Rohan worked on LLaMA at Meta AI before joining Sarvam AI as a founding engineer. Focused on building India-specific language models.",
+      "linkedin_url": "https://linkedin.com/in/rohan-mehta-ml"
+    },
+    {
+      "id": "5",
+      "name": "Ananya Krishnan",
+      "headline": "Building voice AI for Indian languages",
+      "score": 8.5,
+      "score_tier": "HIGH",
+      "former_lab": "Google",
+      "former_title": "Staff Research Scientist",
+      "former_tenure_years": 5.2,
+      "former_end_date": "2024-08-15",
+      "current_role": "Founder",
+      "current_company": "VakyanAI",
+      "current_company_headcount": 8,
+      "current_city": "Chennai",
+      "days_since_return": 247,
+      "signals": [
+        {"type": "founder", "label": "Founder"},
+        {"type": "tiny_company", "label": "Sub-10 team"},
+        {"type": "senior", "label": "Staff+ at lab"}
+      ],
+      "synthesis": "Ananya led speech recognition research at Google for Indian languages. Now building VakyanAI, an ASR platform optimized for regional Indian languages.",
+      "linkedin_url": "https://linkedin.com/in/ananya-krishnan"
+    },
+    {
+      "id": "6",
+      "name": "Vikram Singh",
+      "headline": "VP Engineering @ Ola Electric",
+      "score": 6.8,
+      "score_tier": "MED",
+      "former_lab": "xAI",
+      "former_title": "Senior Engineer",
+      "former_tenure_years": 1.5,
+      "former_end_date": "2025-02-01",
+      "current_role": "VP Engineering",
+      "current_company": "Ola Electric",
+      "current_company_headcount": 5000,
+      "current_city": "Bangalore",
+      "days_since_return": 77,
+      "signals": [
+        {"type": "recent_return", "label": "Returned 2mo ago"},
+        {"type": "large_company", "label": "At scale-up"}
+      ],
+      "synthesis": "Vikram joined xAI during its early days and worked on Grok's inference infrastructure. Returned to lead autonomous driving ML at Ola Electric.",
+      "linkedin_url": "https://linkedin.com/in/vikram-singh-eng"
+    },
+    {
+      "id": "7",
+      "name": "Meera Iyer",
+      "headline": "Building autonomous coding agents",
+      "score": 9.0,
+      "score_tier": "HIGH",
+      "former_lab": "Anthropic",
+      "former_title": "Research Engineer",
+      "former_tenure_years": 2.3,
+      "former_end_date": "2025-03-01",
+      "current_role": "Founder & CEO",
+      "current_company": "CodePilot AI",
+      "current_company_headcount": 3,
+      "current_city": "Mumbai",
+      "days_since_return": 49,
+      "signals": [
+        {"type": "founder", "label": "Founder/CEO"},
+        {"type": "recent_return", "label": "Returned 2mo ago"},
+        {"type": "tiny_company", "label": "Sub-10 team"}
+      ],
+      "synthesis": "Meera worked on Claude's coding capabilities at Anthropic. Left in early 2025 to build CodePilot AI, focusing on autonomous code generation for enterprise.",
+      "linkedin_url": "https://linkedin.com/in/meera-iyer-ai"
+    },
+    {
+      "id": "8",
+      "name": "Aditya Verma",
+      "headline": "Chief Scientist @ Krutrim",
+      "score": 7.9,
+      "score_tier": "MED",
+      "former_lab": "Mistral",
+      "former_title": "Senior Research Scientist",
+      "former_tenure_years": 1.8,
+      "former_end_date": "2024-10-15",
+      "current_role": "Chief Scientist",
+      "current_company": "Krutrim",
+      "current_company_headcount": 150,
+      "current_city": "Bangalore",
+      "days_since_return": 186,
+      "signals": [
+        {"type": "senior", "label": "Chief Scientist"},
+        {"type": "founding_team", "label": "Early team"}
+      ],
+      "synthesis": "Aditya was an early researcher at Mistral AI in Paris, working on Mixtral architecture. Joined Krutrim as Chief Scientist to lead their LLM development.",
+      "linkedin_url": "https://linkedin.com/in/aditya-verma-ml"
+    },
+    {
+      "id": "9",
+      "name": "Neha Reddy",
+      "headline": "Stealth - AI for healthcare",
+      "score": 8.3,
+      "score_tier": "HIGH",
+      "former_lab": "DeepMind",
+      "former_title": "Research Scientist",
+      "former_tenure_years": 3.5,
+      "former_end_date": "2024-12-01",
+      "current_role": "Co-founder",
+      "current_company": "Stealth Healthcare AI",
+      "current_company_headcount": 6,
+      "current_city": "Hyderabad",
+      "days_since_return": 139,
+      "signals": [
+        {"type": "founder", "label": "Co-founder"},
+        {"type": "tiny_company", "label": "Sub-10 team"},
+        {"type": "recent_return", "label": "Returned 5mo ago"}
+      ],
+      "synthesis": "Neha worked on AlphaFold at DeepMind. Now building a stealth startup applying protein structure prediction to drug discovery for tropical diseases.",
+      "linkedin_url": "https://linkedin.com/in/neha-reddy-bio"
+    },
+    {
+      "id": "10",
+      "name": "Sameer Gupta",
+      "headline": "Principal Engineer @ Flipkart",
+      "score": 6.2,
+      "score_tier": "LOW",
+      "former_lab": "Scale AI",
+      "former_title": "ML Engineer",
+      "former_tenure_years": 2.1,
+      "former_end_date": "2024-05-01",
+      "current_role": "Principal Engineer",
+      "current_company": "Flipkart",
+      "current_company_headcount": 12000,
+      "current_city": "Bangalore",
+      "days_since_return": 353,
+      "signals": [
+        {"type": "large_company", "label": "At big tech"}
+      ],
+      "synthesis": "Sameer led data annotation pipeline development at Scale AI. Joined Flipkart to build recommendation systems and search ranking models.",
+      "linkedin_url": "https://linkedin.com/in/sameer-gupta-ml"
+    },
+    {
+      "id": "11",
+      "name": "Divya Nair",
+      "headline": "Building multimodal AI @ stealth",
+      "score": 8.7,
+      "score_tier": "HIGH",
+      "former_lab": "OpenAI",
+      "former_title": "Research Engineer",
+      "former_tenure_years": 2.9,
+      "former_end_date": "2025-01-01",
+      "current_role": "Founder",
+      "current_company": "Stealth Multimodal",
+      "current_company_headcount": 5,
+      "current_city": "Delhi NCR",
+      "days_since_return": 108,
+      "signals": [
+        {"type": "founder", "label": "Founder"},
+        {"type": "tiny_company", "label": "Sub-10 team"},
+        {"type": "recent_return", "label": "Returned 4mo ago"}
+      ],
+      "synthesis": "Divya worked on GPT-4V's vision capabilities at OpenAI. Building a stealth multimodal AI company focused on document understanding for Indian enterprises.",
+      "linkedin_url": "https://linkedin.com/in/divya-nair-ml"
+    },
+    {
+      "id": "12",
+      "name": "Rajesh Kumar",
+      "headline": "AI Lead @ Zoho",
+      "score": 6.5,
+      "score_tier": "LOW",
+      "former_lab": "Google",
+      "former_title": "Software Engineer",
+      "former_tenure_years": 3.8,
+      "former_end_date": "2024-07-01",
+      "current_role": "AI Lead",
+      "current_company": "Zoho",
+      "current_company_headcount": 15000,
+      "current_city": "Chennai",
+      "days_since_return": 292,
+      "signals": [
+        {"type": "large_company", "label": "At big tech"}
+      ],
+      "synthesis": "Rajesh worked on TensorFlow and Google Translate. Now leading AI initiatives at Zoho, building language models for productivity tools.",
+      "linkedin_url": "https://linkedin.com/in/rajesh-kumar-ai"
+    },
+    {
+      "id": "13",
+      "name": "Ishaan Bhatt",
+      "headline": "Robotics + AI @ stealth",
+      "score": 8.0,
+      "score_tier": "HIGH",
+      "former_lab": "DeepMind",
+      "former_title": "Research Engineer",
+      "former_tenure_years": 2.6,
+      "former_end_date": "2024-11-15",
+      "current_role": "Co-founder",
+      "current_company": "RoboticsMind",
+      "current_company_headcount": 9,
+      "current_city": "Mumbai",
+      "days_since_return": 155,
+      "signals": [
+        {"type": "founder", "label": "Co-founder"},
+        {"type": "tiny_company", "label": "Sub-10 team"}
+      ],
+      "synthesis": "Ishaan worked on robotic manipulation at DeepMind. Co-founded RoboticsMind to build AI-powered warehouse automation for Indian e-commerce.",
+      "linkedin_url": "https://linkedin.com/in/ishaan-bhatt"
+    },
+    {
+      "id": "14",
+      "name": "Tanvi Saxena",
+      "headline": "Building AI tutors for Bharat",
+      "score": 7.6,
+      "score_tier": "MED",
+      "former_lab": "Anthropic",
+      "former_title": "Applied Researcher",
+      "former_tenure_years": 1.9,
+      "former_end_date": "2024-10-01",
+      "current_role": "CEO",
+      "current_company": "ShikshaAI",
+      "current_company_headcount": 15,
+      "current_city": "Delhi NCR",
+      "days_since_return": 200,
+      "signals": [
+        {"type": "founder", "label": "CEO"},
+        {"type": "tiny_company", "label": "Sub-20 team"}
+      ],
+      "synthesis": "Tanvi worked on Claude's educational applications at Anthropic. Building ShikshaAI, an AI tutor platform for K-12 students in regional languages.",
+      "linkedin_url": "https://linkedin.com/in/tanvi-saxena"
+    },
+    {
+      "id": "15",
+      "name": "Karthik Sundaram",
+      "headline": "ML Platform @ Swiggy",
+      "score": 6.9,
+      "score_tier": "MED",
+      "former_lab": "Meta",
+      "former_title": "Software Engineer",
+      "former_tenure_years": 3.2,
+      "former_end_date": "2024-08-01",
+      "current_role": "Staff Engineer",
+      "current_company": "Swiggy",
+      "current_company_headcount": 8000,
+      "current_city": "Bangalore",
+      "days_since_return": 261,
+      "signals": [
+        {"type": "large_company", "label": "At scale-up"}
+      ],
+      "synthesis": "Karthik built ML infrastructure at Meta for recommendation systems. Leading Swiggy's ML platform team to improve delivery time predictions.",
+      "linkedin_url": "https://linkedin.com/in/karthik-sundaram"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #0A0A0B;
+  --bg-card: #111113;
+  --bg-elevated: #17171A;
+  --border-subtle: #1F1F23;
+  --border-visible: #2A2A30;
+
+  --text-primary: #F5F5F7;
+  --text-secondary: #A1A1A9;
+  --text-tertiary: #6B6B73;
+
+  --accent-green: #22C55E;
+  --accent-amber: #F59E0B;
+  --accent-gray: #64748B;
+  --accent-india: #FF6B35;
+  --accent-primary: #3B82F6;
+
+  --lab-anthropic: #D97757;
+  --lab-openai: #10A37F;
+  --lab-deepmind: #4285F4;
+  --lab-meta: #0668E1;
+  --lab-google: #EA4335;
+  --lab-mistral: #F97316;
+  --lab-xai: #8B5CF6;
+  --lab-scale: #06B6D4;
+  --lab-default: #A1A1A9;
+}
+
+@theme inline {
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-card: var(--bg-card);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-visible: var(--border-visible);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+
+  --color-accent-green: var(--accent-green);
+  --color-accent-amber: var(--accent-amber);
+  --color-accent-gray: var(--accent-gray);
+  --color-accent-india: var(--accent-india);
+  --color-accent-primary: var(--accent-primary);
+
+  --color-lab-anthropic: var(--lab-anthropic);
+  --color-lab-openai: var(--lab-openai);
+  --color-lab-deepmind: var(--lab-deepmind);
+  --color-lab-meta: var(--lab-meta);
+  --color-lab-google: var(--lab-google);
+  --color-lab-mistral: var(--lab-mistral);
+  --color-lab-xai: var(--lab-xai);
+  --color-lab-scale: var(--lab-scale);
+  --color-lab-default: var(--lab-default);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
