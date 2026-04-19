@@ -13,15 +13,13 @@ interface FilterBarProps {
 const filters: { value: FilterType; label: string }[] = [
   { value: "all", label: "All" },
   { value: "founders", label: "Founders" },
-  { value: "recent", label: "Returned recently" },
-  { value: "stealth", label: "At stealth startups" },
 ];
 
 const sorts: { value: SortType; label: string }[] = [
   { value: "score", label: "Score" },
   { value: "return_date", label: "Return date" },
-  { value: "lab", label: "Former lab" },
-  { value: "seniority", label: "Seniority" },
+  // { value: "lab", label: "Former lab" },
+  // { value: "seniority", label: "Seniority" },
 ];
 
 export function FilterBar({
