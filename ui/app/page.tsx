@@ -1,17 +1,22 @@
 "use client";
 
 import { useEffect, useState, useMemo, useCallback } from "react";
-import { CandidatesData } from "@/lib/types";
+import { CandidatesData, CompaniesData } from "@/lib/types";
 import { Header } from "@/components/Header";
 import { StatsBanner } from "@/components/StatsBanner";
 import { CityDistribution } from "@/components/CityDistribution";
+import { TabNavigation, TabType } from "@/components/TabNavigation";
 import { FilterBar, FilterType, SortType } from "@/components/FilterBar";
 import { CandidateFeed } from "@/components/CandidateFeed";
+import { CompanyFeed } from "@/components/CompanyFeed";
+import { CompanyStatsBanner } from "@/components/CompanyStatsBanner";
 import { ScanFreshButton } from "@/components/ScanFreshButton";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
   const [data, setData] = useState<CandidatesData | null>(null);
+  const [companiesData, setCompaniesData] = useState<CompaniesData | null>(null);
+  const [activeTab, setActiveTab] = useState<TabType>("candidates");
   const [filter, setFilter] = useState<FilterType>("all");
   const [sort, setSort] = useState<SortType>("score");
   const [scanningId, setScanningId] = useState<string | null>(null);
@@ -21,6 +26,10 @@ export default function Home() {
     fetch("/data/candidates.json")
       .then((res) => res.json())
       .then(setData);
+    fetch("/data/companies.json")
+      .then((res) => res.json())
+      .then(setCompaniesData)
+      .catch(() => setCompaniesData(null));
   }, []);
 
   const filteredCandidates = useMemo(() => {
@@ -116,22 +125,42 @@ export default function Home() {
       <Header lastUpdated={data.meta.last_updated} />
 
       <main className="max-w-[1400px] mx-auto px-6 pt-20">
-        <StatsBanner meta={data.meta} />
+        <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />
 
-        <CityDistribution cities={data.meta.cities} />
+        {activeTab === "candidates" ? (
+          <>
+            <StatsBanner meta={data.meta} />
 
-        <FilterBar
-          activeFilter={filter}
-          activeSort={sort}
-          onFilterChange={setFilter}
-          onSortChange={setSort}
-        />
+            <CityDistribution cities={data.meta.cities} />
 
-        <CandidateFeed
-          candidates={filteredCandidates}
-          scanningId={scanningId}
-          visibleSignals={visibleSignals}
-        />
+            <FilterBar
+              activeFilter={filter}
+              activeSort={sort}
+              onFilterChange={setFilter}
+              onSortChange={setSort}
+            />
+
+            <CandidateFeed
+              candidates={filteredCandidates}
+              scanningId={scanningId}
+              visibleSignals={visibleSignals}
+            />
+          </>
+        ) : (
+          <>
+            {companiesData && (
+              <>
+                <CompanyStatsBanner
+                  totalCompanies={companiesData.meta.total_companies}
+                  totalExLabMembers={companiesData.companies.reduce((sum, c) => sum + c.ex_lab_count, 0)}
+                  companiesWithFounders={companiesData.companies.filter((c) => c.has_founder_from_lab).length}
+                  sourceCandidates={companiesData.meta.source_candidates}
+                />
+                <CompanyFeed companies={companiesData.companies} />
+              </>
+            )}
+          </>
+        )}
 
         <Footer />
       </main>

@@ -7,19 +7,47 @@ interface SignalBadgeProps {
 }
 
 export function SignalBadge({ signal }: SignalBadgeProps) {
-  const typeStyles: Record<string, string> = {
-    founder: "bg-accent-green/10 text-accent-green",
-    recent_return: "bg-accent-amber/10 text-accent-amber",
-    tiny_company: "bg-accent-primary/10 text-accent-primary",
-    senior: "bg-purple-500/10 text-purple-400",
-    founding_team: "bg-accent-green/10 text-accent-green",
-    large_company: "bg-accent-gray/10 text-accent-gray",
+  const typeStyles: Record<string, { bg: string; text: string; glow: string }> = {
+    founder: {
+      bg: "bg-accent-green/10 hover:bg-accent-green/15",
+      text: "text-accent-green",
+      glow: "shadow-[0_0_12px_rgba(34,197,94,0.2)]"
+    },
+    recent_return: {
+      bg: "bg-accent-amber/10 hover:bg-accent-amber/15",
+      text: "text-accent-amber",
+      glow: "shadow-[0_0_12px_rgba(245,158,11,0.2)]"
+    },
+    tiny_company: {
+      bg: "bg-accent-primary/10 hover:bg-accent-primary/15",
+      text: "text-accent-primary",
+      glow: "shadow-[0_0_12px_rgba(59,130,246,0.2)]"
+    },
+    senior: {
+      bg: "bg-purple-500/10 hover:bg-purple-500/15",
+      text: "text-purple-400",
+      glow: "shadow-[0_0_12px_rgba(168,85,247,0.2)]"
+    },
+    founding_team: {
+      bg: "bg-accent-green/10 hover:bg-accent-green/15",
+      text: "text-accent-green",
+      glow: "shadow-[0_0_12px_rgba(34,197,94,0.2)]"
+    },
+    large_company: {
+      bg: "bg-accent-gray/10 hover:bg-accent-gray/15",
+      text: "text-accent-gray",
+      glow: "shadow-[0_0_12px_rgba(100,116,139,0.15)]"
+    },
   };
 
-  const style = typeStyles[signal.type] || "bg-bg-elevated text-text-secondary";
+  const style = typeStyles[signal.type] || {
+    bg: "bg-bg-elevated hover:bg-bg-elevated/80",
+    text: "text-text-secondary",
+    glow: ""
+  };
 
   return (
-    <span className={`px-2 py-0.5 text-xs rounded-md ${style}`}>
+    <span className={`inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full border border-current/20 transition-all duration-200 hover:scale-[1.02] ${style.bg} ${style.text} ${style.glow}`}>
       {signal.label}
     </span>
   );

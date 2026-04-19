@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "total_companies": 8,
+    "last_updated": "2026-04-19T12:00:00",
+    "source_candidates": 30
+  },
+  "companies": [
+    {
+      "id": "12628194",
+      "name": "JSW Motors Limited",
+      "score": 8.2,
+      "score_tier": "HIGH",
+      "headcount": 124,
+      "ex_lab_count": 1,
+      "avg_seniority": 7.0,
+      "has_founder_from_lab": false,
+      "funding_total": null,
+      "last_round": null,
+      "team_highlights": [
+        {
+          "name": "Arjun Hiradd",
+          "title": "Chief Administrative Officer",
+          "former_lab": "OpenAI"
+        }
+      ],
+      "linkedin_url": "https://www.linkedin.com/company/jsw-motors-ltd"
+    },
+    {
+      "id": "2194603",
+      "name": "Lightwheel",
+      "score": 7.7,
+      "score_tier": "HIGH",
+      "headcount": 37,
+      "ex_lab_count": 1,
+      "avg_seniority": 7.0,
+      "has_founder_from_lab": false,
+      "funding_total": 145639757.0,
+      "last_round": "series_a",
+      "team_highlights": [
+        {
+          "name": "Akshat Rastogi",
+          "title": "Technical Product Ops Manager",
+          "former_lab": "Scale AI"
+        }
+      ],
+      "linkedin_url": "https://www.linkedin.com/company/lightwheel2023"
+    },
+    {
+      "id": "631645",
+      "name": "Handshake",
+      "score": 7.3,
+      "score_tier": "HIGH",
+      "headcount": 6270,
+      "ex_lab_count": 1,
+      "avg_seniority": 7.0,
+      "has_founder_from_lab": false,
+      "funding_total": 434000000.0,
+      "last_round": "series_f",
+      "team_highlights": [
+        {
+          "name": "Farzan Shaikh",
+          "title": "Strategic Projects",
+          "former_lab": "Scale AI"
+        }
+      ],
+      "linkedin_url": "https://www.linkedin.com/company/team-handshake"
+    },
+    {
+      "id": "14988816",
+      "name": "AvairAI Inc.",
+      "score": 7.2,
+      "score_tier": "HIGH",
+      "headcount": 6,
+      "ex_lab_count": 1,
+      "avg_seniority": 7.0,
+      "has_founder_from_lab": true,
+      "funding_total": null,
+      "last_round": null,
+      "team_highlights": [
+        {
+          "name": "Sunil Hans",
+          "title": "President and Co-Founder",
+          "former_lab": "Adept"
+        }
+      ],
+      "linkedin_url": "https://www.linkedin.com/company/avairai-inc"
+    },
+    {
+      "id": "816385",
+      "name": "micro1",
+      "score": 7.0,
+      "score_tier": "HIGH",
+      "headcount": 4125,
+      "ex_lab_count": 1,
+      "avg_seniority": 7.0,
+      "has_founder_from_lab": false,
+      "funding_total": 41600000.0,
+      "last_round": "series_a",
+      "team_highlights": [
+        {
+          "name": "Dr Ritu Chandna",
+          "title": "Human Data Lead",
+          "former_lab": "xAI"
+        }
+      ],
+      "linkedin_url": "https://www.linkedin.com/company/micro1"
+    },
+    {
+      "id": "2633194",
+      "name": "AIM Intelligence",
+      "score": 7.0,
+      "score_tier": "MED",
+      "headcount": 18,
+      "ex_lab_count": 1,
+      "avg_seniority": 7.0,
+      "has_founder_from_lab": false,
+      "funding_total": 6782560.0,
+      "last_round": "series_a",
+      "team_highlights": [
+        {
+          "name": "Arth Singh \ud83e\udd89",
+          "title": "Research Engineer, AI Safety",
+          "former_lab": "OpenAI"
+        }
+      ],
+      "linkedin_url": "https://www.linkedin.com/company/aim-intelligence-co"
+    },
+    {
+      "id": "17063047",
+      "name": "Aagman: Your AI Trading Partner",
+      "score": 7.0,
+      "score_tier": "MED",
+      "headcount": 8,
+      "ex_lab_count": 1,
+      "avg_seniority": 7.0,
+      "has_founder_from_lab": false,
+      "funding_total": null,
+      "last_round": null,
+      "team_highlights": [
+        {
+          "name": "Aman Jain",
+          "title": "Founding Software Engineer",
+          "former_lab": "OpenAI"
+        }
+      ],
+      "linkedin_url": "https://www.linkedin.com/company/aagman-ai"
+    },
+    {
+      "id": "1035813",
+      "name": "Landmark Group",
+      "score": 7.0,
+      "score_tier": "MED",
+      "headcount": 31084,
+      "ex_lab_count": 1,
+      "avg_seniority": 7.0,
+      "has_founder_from_lab": false,
+      "funding_total": 0.0,
+      "last_round": "",
+      "team_highlights": [
+        {
+          "name": "Salman Khalid",
+          "title": "Software Engineer",
+          "former_lab": "Scale AI"
+        }
+      ],
+      "linkedin_url": "https://www.linkedin.com/company/landmark-group"
+    }
+  ]
+}

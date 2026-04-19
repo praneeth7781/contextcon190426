@@ -46,3 +46,35 @@ export interface CandidatesData {
   meta: Meta;
   candidates: Candidate[];
 }
+
+export interface TeamHighlight {
+  name: string;
+  title: string;
+  former_lab: string;
+}
+
+export interface Company {
+  id: string;
+  name: string;
+  score: number;
+  score_tier: "HIGH" | "MED" | "LOW";
+  headcount: number | null;
+  ex_lab_count: number;
+  avg_seniority: number;
+  has_founder_from_lab: boolean;
+  funding_total: number | null;
+  last_round: string | null;
+  team_highlights: TeamHighlight[];
+  linkedin_url?: string;
+}
+
+export interface CompaniesMeta {
+  total_companies: number;
+  last_updated: string;
+  source_candidates: number;
+}
+
+export interface CompaniesData {
+  meta: CompaniesMeta;
+  companies: Company[];
+}

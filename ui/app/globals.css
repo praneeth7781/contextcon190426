@@ -1,15 +1,16 @@
 @import "tailwindcss";
 
+/* Light mode (default) - Anthropic-inspired warm cream aesthetic */
 :root {
-  --bg-primary: #0A0A0B;
-  --bg-card: #111113;
-  --bg-elevated: #17171A;
-  --border-subtle: #1F1F23;
-  --border-visible: #2A2A30;
+  --bg-primary: #faf9f5;
+  --bg-card: #fefdfb;
+  --bg-elevated: #fdf9f2;
+  --border-subtle: #e8e6dc;
+  --border-visible: #d4d0c8;
 
-  --text-primary: #F5F5F7;
-  --text-secondary: #A1A1A9;
-  --text-tertiary: #6B6B73;
+  --text-primary: #141413;
+  --text-secondary: #6b6b73;
+  --text-tertiary: #b0aea5;
 
   --accent-green: #22C55E;
   --accent-amber: #F59E0B;
@@ -25,7 +26,52 @@
   --lab-mistral: #F97316;
   --lab-xai: #8B5CF6;
   --lab-scale: #06B6D4;
+  --lab-default: #6b6b73;
+
+  /* Gradient backgrounds */
+  --gradient-card: linear-gradient(145deg, #fefdfb 0%, #faf9f5 100%);
+  --gradient-elevated: linear-gradient(145deg, #fdf9f2 0%, #faf9f5 100%);
+
+  /* Glow effects (softer for light mode) */
+  --glow-green: 0 0 20px rgba(34, 197, 94, 0.1);
+  --glow-amber: 0 0 20px rgba(245, 158, 11, 0.1);
+  --glow-india: 0 0 20px rgba(255, 107, 53, 0.12);
+  --glow-primary: 0 0 20px rgba(59, 130, 246, 0.1);
+
+  /* Depth shadows (subtle, warm) */
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-elevated: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode */
+.dark {
+  --bg-primary: #0A0A0B;
+  --bg-card: #111113;
+  --bg-elevated: #17171A;
+  --border-subtle: #1F1F23;
+  --border-visible: #2A2A30;
+
+  --text-primary: #F5F5F7;
+  --text-secondary: #A1A1A9;
+  --text-tertiary: #6B6B73;
+
   --lab-default: #A1A1A9;
+
+  /* Gradient backgrounds */
+  --gradient-card: linear-gradient(145deg, #131316 0%, #0D0D0F 100%);
+  --gradient-elevated: linear-gradient(145deg, #1A1A1E 0%, #141417 100%);
+
+  /* Glow effects */
+  --glow-green: 0 0 20px rgba(34, 197, 94, 0.15);
+  --glow-amber: 0 0 20px rgba(245, 158, 11, 0.15);
+  --glow-india: 0 0 20px rgba(255, 107, 53, 0.2);
+  --glow-primary: 0 0 20px rgba(59, 130, 246, 0.15);
+
+  /* Depth shadows */
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+  --shadow-card-hover: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  --shadow-elevated: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
 }
 
 @theme inline {
@@ -57,10 +103,70 @@
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --shadow-card: var(--shadow-card);
+  --shadow-card-hover: var(--shadow-card-hover);
+  --shadow-elevated: var(--shadow-elevated);
 }
 
 body {
   background: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+/* Keyframe animations */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.4s ease-out both;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.15s ease-out both;
+}
+
+/* Custom scrollbar - light mode */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+/* Custom scrollbar - dark mode */
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
 }
