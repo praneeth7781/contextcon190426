@@ -1,9 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { Candidate } from "@/lib/types";
 import { getLabColor, getInitials, hashStringToColor, formatDaysAgo } from "@/lib/format";
 import { ScoreBadge } from "./ScoreBadge";
 import { SignalBadge } from "./SignalBadge";
+import { ScoreBreakdown } from "./ScoreBreakdown";
 
 interface CandidateCardProps {
   candidate: Candidate;
@@ -12,11 +14,13 @@ interface CandidateCardProps {
 }
 
 export function CandidateCard({ candidate, isScanning, visibleSignals }: CandidateCardProps) {
+  const [expanded, setExpanded] = useState(false);
   const signals = candidate.signals || [];
   const displaySignals = isScanning && visibleSignals !== undefined
     ? signals.slice(0, visibleSignals)
     : signals.slice(0, 4);
   const remainingCount = signals.length - 4;
+  const hasScoreDetails = candidate.scores && candidate.score_breakdown;
 
   return (
     <div
@@ -63,7 +67,26 @@ export function CandidateCard({ candidate, isScanning, visibleSignals }: Candida
                 </p>
               )}
             </div>
-            <ScoreBadge score={candidate.score} tier={candidate.score_tier} />
+            {hasScoreDetails ? (
+                  <button
+                    onClick={() => setExpanded(!expanded)}
+                    className="flex items-center gap-1.5 group/score cursor-pointer"
+                    aria-expanded={expanded}
+                  >
+                    <ScoreBadge score={candidate.score} tier={candidate.score_tier} />
+                    <span
+                      className={`text-text-tertiary transition-transform duration-200 ${
+                        expanded ? "rotate-180" : ""
+                      }`}
+                    >
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </span>
+                  </button>
+                ) : (
+                  <ScoreBadge score={candidate.score} tier={candidate.score_tier} />
+                )}
           </div>
 
           {/* Employment arc */}
@@ -134,6 +157,14 @@ export function CandidateCard({ candidate, isScanning, visibleSignals }: Candida
             <p className="mt-3 text-sm text-text-secondary leading-relaxed">
               {candidate.synthesis}
             </p>
+          )}
+
+          {/* Score Breakdown */}
+          {expanded && hasScoreDetails && (
+            <ScoreBreakdown
+              scores={candidate.scores!}
+              breakdown={candidate.score_breakdown!}
+            />
           )}
 
           {/* LinkedIn link */}

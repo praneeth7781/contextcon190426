@@ -3,6 +3,25 @@ export interface Signal {
   label: string;
 }
 
+export interface Scores {
+  lab_experience: number;
+  seniority: number;
+  recency: number;
+  startup_fit: number;
+  education: number;
+  company_quality: number;
+  composite: number;
+}
+
+export interface ScoreBreakdown {
+  lab_experience: string;
+  seniority: string;
+  recency: string;
+  startup_fit: string;
+  education: string;
+  company_quality: string;
+}
+
 export interface Candidate {
   id: string;
   name: string;
@@ -10,6 +29,8 @@ export interface Candidate {
   headline?: string;
   score: number;
   score_tier: "HIGH" | "MED" | "LOW";
+  scores?: Scores;
+  score_breakdown?: ScoreBreakdown;
   former_lab: string;
   former_title?: string;
   former_tenure_years?: number;
